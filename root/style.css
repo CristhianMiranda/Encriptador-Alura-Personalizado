@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+  }
+
+
+  @keyframes mostrarse {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes aparecer {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes centrar {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes desaparecer {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+#hacker
+{
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+      
+      
+}
+
+
+
+#imagencentro{
+  position: absolute;
+  width: auto;
+  height: auto;
+
+}
+
+#elemento{
+    width: 100%;
+    height: 100%;
+    background: url(#canvasMatrix);
+    position: relative;
+}
+
+#elemento img{
+
+  
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 74px;
+    top: 111px;
+}
+
+#imagen-opaco{
+  
+  animation: aparecer 1.3s ease-in-out forwards;
+}
+
+#imagen{
+
+    
+
+    display: none;
+    transition: opacity 5s ease-in;
+    opacity: 0;
+}
+
+
+
+  #imagen.show {
+    display: block;
+    opacity: 1;
+  }
+
+ 
+
+
+
+
+
+#mensaje {
+
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: aparecer 1.3s ease-in-out forwards;
+  
+
+    text-shadow: 4px 4px 15px #00FF00; 
+    border: 2px solid transparent;
+    font-size: 16px;
+    padding: 5px;
+    background-color: transparent;
+    min-height: 50px;
+    resize: none;
+    width: 100%;
+
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 360px;
+    top: 351px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+
+color: #E8E8E8;
+text-shadow: #00FF00;
+  }
+  
+  #mensaje:focus {
+    outline: none;
+  }
+  
+  .inicio{
+    width: 100%;
+      height: 100%;
+    
+  }
+  
+  
+  
+  .inicio img{
+    position: static;
+    top: 38%;
+    left: 32%;
+    transform: scale(0);
+    opacity: 0;
+    animation: aparecer 0.5s ease-in-out forwards, desaparecer 1.5s ease-in-out 0.5s forwards;
+  }
+
+
+
+  .acciones{
+    
+    
+    opacity: 0;
+    animation: mostrarse 5s ease-in-out 2S forwards;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 680px;
+    height: 77px;
+    left: 280px;
+    top: 854px;
+  }
+
+
+  .acciones img{
+    width: 16px;
+    height: 16px;
+    
+    float: left;
+  }
+
+  .acciones p{
+    /* Solo letras minúsculas y sin acentos */
+
+
+    
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+  }
+
+  .botones{
+    opacity: 0;
+    animation: mostrarse 5s ease-in-out 2S forwards;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 77px;
+    left: 280px;
+    top: 893px;
+
+  }
+    #encriptador{
+        /* Auto layout */
+
+        display: inline;
+        font-size: 25px;
+        font-family: 'Inter';
+        font-weight: bold;
+        width: 328px;
+        height: 80px;
+        color: black;
+        background: #00FF00;
+        border-radius: 24px;
+    }
+
+    #desencriptador
+    {
+
+        /* Auto layout */
+
+        display: inline;
+        font-size: 25px;
+        font-family: 'Inter';
+        font-weight: bold;
+        width: 328px;
+        height: 80px;
+
+        /* Light gray */
+        color: black;
+        background: #D8DFE8;
+        border-radius: 24px;
+
+       
+    }
+
+    #canvasMatrix {
+    width: 100%;
+    height: 100%;
+    }
