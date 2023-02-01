@@ -40,7 +40,7 @@ function matrix () {
 }
 
 // render the animation at 20 FPS.
-setInterval(matrix, 50);
+setInterval(matrix, 40);
 
 
 
@@ -62,7 +62,7 @@ document.getElementById("mensaje").addEventListener("click", function() {
 	});
 
 
-
+	/*cambio de imagenes*/
 	const images = document.querySelectorAll("#image-container img");
 	const button = document.querySelector("button");
 	let currentIndex = 0;
@@ -73,10 +73,10 @@ document.getElementById("mensaje").addEventListener("click", function() {
 		images[currentIndex].style.display = "block";
 	  }, 2000);
 
-
+	  /*Desencriptar y encriptar */
 	  const mensaje = document.getElementById("mensaje");
 	  const encriptador = document.getElementById("encriptador");
-	  const desencriptador = document.getElementById("desencriptador");
+	  const desencriptador = document.getElementById("descencriptador");
 	  const output = document.getElementById("output");
 	  const imageContainer = document.getElementById("image-container");
 	  
@@ -86,7 +86,7 @@ document.getElementById("mensaje").addEventListener("click", function() {
 		imageContainer.style.opacity = 0;
 	  });
 	  
-	  desencriptador.addEventListener("click", function() {
+	  descencriptador.addEventListener("click", function() {
 		const decrypted = decrypt(mensaje.value);
 		output.innerText = decrypted;
 		imageContainer.style.opacity = 0;
@@ -94,7 +94,7 @@ document.getElementById("mensaje").addEventListener("click", function() {
 	  
 
 
-
+	  /*Metodo de encriptar */
 
 
 	  function encrypt(word) {
@@ -124,6 +124,8 @@ document.getElementById("mensaje").addEventListener("click", function() {
 		return encrypted;
 	  }
 	  
+	  /*Metodo de descen */
+
 	  function decrypt(str) {
 		return str.replace(/enter/g, 'e')
 				  .replace(/imes/g, 'i')

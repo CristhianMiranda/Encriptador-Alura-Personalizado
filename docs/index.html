@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
+
         <meta charset="UTF-8">
          <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+
     </head>
 
-    <body id="hacker">
+    <body id="panel-fondo">
         
         <div id="elemento">
             
-            <img id="imagen-opaco" src="assets/Logo-negro.png">
-            <img id="imagen" src="assets/Logo.png">
-
+            <img id="imagen-opaco" src="images/Logo-opaco.png">
+            <img id="imagen" src="images/Logo.png">
             <textarea id="mensaje" spellcheck="false">Ingrese el texto aquí</textarea>
-
             <canvas id="canvasMatrix" ></canvas>
 
         </div>
 
         <div class="inicio">
             
-            <img id="imagencentro" src="assets/logo-centro.png">
+            <img id="imagencentro" src="images/logo-centro.png">
+
         </div>
 
         <div class="acciones">
 
-            <img id="informacion" src="assets/informacion.png">
+            <img id="informacion" src="images/informacion.png">
             <p class="letra-pequena">Solo letras minúsculas y sin acentos</p>
 
-            
-        
         </div>
         
         <div class="botones">
 
             <button id="encriptador">Encriptar</button>
-            <button id="desencriptador">Desencriptar</button>
+            <button id="descencriptador">Desencriptar</button>
 
         </div>
 
         <div class="texto-transformado">
+
             <p id="output"></p>
+
             <div id="image-container">
 
-                <img class="diamante" src="assets/Muñeco-1.png">
-                <img class="diamante" src="assets/Muñeco-2.png" style="opacity: 1;">
-                <!--<img class="diamante" src="assets/Muñeco-3.png" style="opacity: 1;">-->
+                <img class="muneco" src="images/Muñeco-1.png">
+                <img class="muneco" src="images/Muñeco-2.png" style="opacity: 1;">
                 <h1>Ningún mensaje fue encontrado</h1>
                 <p id="explicacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+
             </div>
         
-            
         </div>
         
         <script src="scripts/matrix.js"></script>   
+
     </body>
-    
     
 </html>
