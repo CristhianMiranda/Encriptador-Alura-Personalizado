@@ -78,17 +78,21 @@ document.getElementById("mensaje").addEventListener("click", function() {
 	  const encriptador = document.getElementById("encriptador");
 	  const desencriptador = document.getElementById("descencriptador");
 	  const output = document.getElementById("output");
+	  
 	  const imageContainer = document.getElementById("image-container");
+
 	  
 	  encriptador.addEventListener("click", function() {
 		const encrypted = encrypt(mensaje.value);
 		output.innerText = encrypted;
+		document.getElementById("boton-copiar").style.display = "inline-block";
 		imageContainer.style.opacity = 0;
 	  });
 	  
 	  descencriptador.addEventListener("click", function() {
 		const decrypted = decrypt(mensaje.value);
 		output.innerText = decrypted;
+		document.getElementById("boton-copiar").style.display = "inline-block";
 		imageContainer.style.opacity = 0;
 	  });
 	  
@@ -135,6 +139,18 @@ document.getElementById("mensaje").addEventListener("click", function() {
 	  }
 	  
 
+
+	  /*Funcion copiar texto de texto encriptadoo o desencriptado */
+	  const botonCopiar = document.querySelector("#boton-copiar");
+	  const textoTransformado = document.querySelector("#output");
+
+	  botonCopiar.addEventListener("click",function(){
+		navigator.clipboard.writeText(textoTransformado.innerText || textoTransformado.textContent)
+		botonCopiar.style.color = "white";
+		setTimeout(function() {
+			botonCopiar.style.color = "black";
+		}, 100);
+	  })
 
 
 
