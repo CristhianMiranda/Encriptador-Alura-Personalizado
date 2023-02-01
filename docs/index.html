@@ -14,7 +14,7 @@
             <img id="imagen-opaco" src="assets/Logo-negro.png">
             <img id="imagen" src="assets/Logo.png">
 
-            <textarea id="mensaje">Ingrese el texto aquí</textarea>
+            <textarea id="mensaje" spellcheck="false">Ingrese el texto aquí</textarea>
 
             <canvas id="canvasMatrix" ></canvas>
 
@@ -42,9 +42,17 @@
         </div>
 
         <div class="texto-transformado">
-            <img class="diamante" src="assets/Muñeco-1.png">
-            <h1>Ningún mensaje fue encontrado</h1>
-            <p id="explicacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <p id="output"></p>
+            <div id="image-container">
+
+                <img class="diamante" src="assets/Muñeco-1.png">
+                <img class="diamante" src="assets/Muñeco-2.png" style="opacity: 1;">
+                <!--<img class="diamante" src="assets/Muñeco-3.png" style="opacity: 1;">-->
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p id="explicacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        
+            
         </div>
         
         <script src="scripts/matrix.js"></script>   
